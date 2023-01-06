@@ -9,12 +9,13 @@
 /coverage
 
 #firebase
-permissions.json
 stripe.exe
+*.txt
 
 # next.js
 /.next/
 /out/
+/.vscode/
 
 # production
 /build

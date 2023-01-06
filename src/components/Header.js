@@ -19,7 +19,7 @@ function Header() {
             {/* top nav */}
             <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
                 <div className="mt-2 flex items-conter flex-grow sm:flex-grow-0">
-                    <Image 
+                    <Image
                         onClick={() => router.push("/")}
                         src="https://links.papareact.com/f90"
                         width={150}
@@ -44,7 +44,7 @@ function Header() {
                         <p className="font-extrabold md:text-sm">Account & Lists</p>
                     </div>
 
-                    <div className="link">
+                    <div onClick={() => router.push("/orders")} className="link">
                         <p>Returns</p>
                         <p className="font-extrabold md:text-sm">& Orders</p>
                     </div>
@@ -75,7 +75,7 @@ function Header() {
                 <p className="link hidden lg:inline-flex">Buy Again</p>
                 <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
                 <p className="link hidden lg:inline-flex">Health & Personal Care</p>
-                
+
             </div>
         </header>
     )

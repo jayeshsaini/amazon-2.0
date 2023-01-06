@@ -13,14 +13,16 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
-const fulfillOrder = async () => {
+const fulfillOrder = async (session) => {
     // console.log('Fulfilling order', session);
 
-    return app.firestore()
+    return app
+        .firestore()
         .collection('users')
         .doc(session.metadata.email)
         .collection("orders")
-        .doc(session.id).set({
+        .doc(session.id)
+        .set({
             amount: session.amount_total / 100,
             amount_shipping: session.total_details.amount_shipping / 100,
             images: JSON.parse(session.metadata.images),
@@ -47,7 +49,7 @@ export default async (req, res) => {
             return res.status(400).send(`Webhook error: ${err.message}`);
         }
 
-        // Handle the checkout.sessoin.completed event
+        // Handle the checkout.session.completed event
         if (event.type === 'checkout.session.completed') {
             const session = event.data.object;
 
@@ -61,7 +63,7 @@ export default async (req, res) => {
 
 export const config = {
     api: {
-        bodyParse: false,
+        bodyParser: false,
         externalResolver: true
     }
 }
