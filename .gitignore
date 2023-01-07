@@ -11,6 +11,7 @@
 #firebase
 stripe.exe
 *.txt
+permissions.json
 
 # next.js
 /.next/
