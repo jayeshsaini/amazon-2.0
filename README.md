@@ -4,7 +4,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue?cacheSeconds=2592000" />
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow" />
   <img alt="Amazon Clone 2.0" src="https://img.shields.io/badge/Amazon-Clone%202.0-blue" />
-  <a href="https://clipchamp.com/watch/ix93z97k9Wb?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+  <a href="">
     <img alt="Template Video" src="https://img.shields.io/badge/Template-Video-brightgreen" />
   </a>
 </p>
